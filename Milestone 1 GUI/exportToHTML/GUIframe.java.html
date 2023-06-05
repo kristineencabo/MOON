@@ -1,0 +1,248 @@
+<html>
+<head>
+<title>GUIframe.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #cc7832;}
+.s2 { color: #6897bb;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+GUIframe.java</font>
+</center></td></tr></table>
+<pre>
+<span class="s1">import </span><span class="s0">javax.swing.JButton</span><span class="s1">;</span>
+<span class="s1">import </span><span class="s0">javax.swing.JFrame</span><span class="s1">;</span>
+<span class="s1">import </span><span class="s0">javax.swing.JLabel</span><span class="s1">;</span>
+<span class="s1">import </span><span class="s0">javax.swing.JPanel</span><span class="s1">;</span>
+<span class="s1">import </span><span class="s0">javax.swing.JTextField</span><span class="s1">;</span>
+
+<span class="s1">public class </span><span class="s0">GUIframe {</span>
+
+    <span class="s1">private static </span><span class="s0">JLabel userLabel</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JLabel positionLabel</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JTextField userText</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JTextField positionText</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JButton button</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JLabel birthdayLabel</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JTextField birthdayText</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JLabel sssNumberLabel</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JTextField sssNumberText</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JLabel philhealthNumberLabel</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JTextField philhealthNumberText</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JLabel pagibigNumberLabel</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JTextField pagibigNumberText</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JLabel tinNumberLabel</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JTextField tinNumberText</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JLabel profileLabel</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JLabel timeInLabel</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JTextField timeInText</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JLabel timeOutLabel</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JTextField timeOutText</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JLabel workingHoursLabel</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JLabel weeklySalaryLabel</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JLabel basicSalaryLabel</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JLabel sssLabel</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JLabel philhealthLabel</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JLabel pagibigLabel</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JLabel tinLabel</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JLabel taxIncomeLabel</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JLabel witHoldingTaxLabel</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JLabel netSalaryLabel</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JTextField workingHoursText</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JTextField weeklySalaryText</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JTextField basicSalaryText</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JTextField sssText</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JTextField philhealthText</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JTextField pagibigText</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JTextField tinText</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JTextField taxIncomeText</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JTextField witHoldingTaxText</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JTextField netSalaryText</span><span class="s1">;</span>
+    <span class="s1">private static </span><span class="s0">JLabel payrollLabel</span><span class="s1">;</span>
+
+    <span class="s1">public static void </span><span class="s0">main(String[] args) {</span>
+
+        <span class="s0">JPanel panel = </span><span class="s1">new </span><span class="s0">JPanel()</span><span class="s1">;</span>
+        <span class="s0">JFrame frame = </span><span class="s1">new </span><span class="s0">JFrame()</span><span class="s1">;</span>
+        <span class="s0">frame.setSize(</span><span class="s2">200</span><span class="s1">, </span><span class="s2">200</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)</span><span class="s1">;</span>
+        <span class="s0">frame.setVisible(</span><span class="s1">true</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">frame.add(panel)</span><span class="s1">;</span>
+
+        <span class="s0">panel.setLayout(</span><span class="s1">null</span><span class="s0">)</span><span class="s1">;</span>
+
+        <span class="s0">profileLabel = </span><span class="s1">new </span><span class="s0">JLabel(</span><span class="s3">&quot;EMPLOYEE DETAILS&quot;</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">profileLabel.setBounds(</span><span class="s2">20</span><span class="s1">, </span><span class="s2">10</span><span class="s1">, </span><span class="s2">80</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(profileLabel)</span><span class="s1">;</span>
+
+        <span class="s0">userLabel = </span><span class="s1">new </span><span class="s0">JLabel(</span><span class="s3">&quot;User:&quot;</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">userLabel.setBounds(</span><span class="s2">120</span><span class="s1">, </span><span class="s2">40</span><span class="s1">, </span><span class="s2">80</span><span class="s1">,</span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(userLabel)</span><span class="s1">;</span>
+
+        <span class="s0">userText = </span><span class="s1">new </span><span class="s0">JTextField(</span><span class="s2">20</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">userText.setBounds(</span><span class="s2">180</span><span class="s1">, </span><span class="s2">40</span><span class="s1">, </span><span class="s2">165</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(userText)</span><span class="s1">;</span>
+
+        <span class="s0">button = </span><span class="s1">new </span><span class="s0">JButton(</span><span class="s3">&quot;Click to Add Photo&quot;</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">button.setBounds(</span><span class="s2">10</span><span class="s1">, </span><span class="s2">40</span><span class="s1">, </span><span class="s2">90</span><span class="s1">, </span><span class="s2">90</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(button)</span><span class="s1">;</span>
+
+        <span class="s0">positionLabel = </span><span class="s1">new </span><span class="s0">JLabel(</span><span class="s3">&quot;Position:&quot;</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">positionLabel.setBounds(</span><span class="s2">120</span><span class="s1">, </span><span class="s2">80</span><span class="s1">, </span><span class="s2">80</span><span class="s1">,</span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(positionLabel)</span><span class="s1">;</span>
+
+        <span class="s0">positionText = </span><span class="s1">new </span><span class="s0">JTextField(</span><span class="s2">20</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">positionText.setBounds(</span><span class="s2">180</span><span class="s1">, </span><span class="s2">80</span><span class="s1">, </span><span class="s2">165</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(positionText)</span><span class="s1">;</span>
+
+        <span class="s0">birthdayLabel = </span><span class="s1">new </span><span class="s0">JLabel(</span><span class="s3">&quot;Birthday:&quot;</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">birthdayLabel.setBounds(</span><span class="s2">120</span><span class="s1">, </span><span class="s2">120</span><span class="s1">, </span><span class="s2">80</span><span class="s1">,</span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(birthdayLabel)</span><span class="s1">;</span>
+
+        <span class="s0">birthdayText = </span><span class="s1">new </span><span class="s0">JTextField(</span><span class="s2">20</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">birthdayText.setBounds(</span><span class="s2">180</span><span class="s1">, </span><span class="s2">120</span><span class="s1">, </span><span class="s2">165</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(birthdayText)</span><span class="s1">;</span>
+
+        <span class="s0">sssNumberLabel = </span><span class="s1">new </span><span class="s0">JLabel(</span><span class="s3">&quot;sssNumber:&quot;</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">sssNumberLabel.setBounds(</span><span class="s2">100</span><span class="s1">, </span><span class="s2">160</span><span class="s1">, </span><span class="s2">80</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(sssNumberLabel)</span><span class="s1">;</span>
+
+        <span class="s0">sssNumberText = </span><span class="s1">new </span><span class="s0">JTextField(</span><span class="s2">20</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">sssNumberText.setBounds(</span><span class="s2">180</span><span class="s1">, </span><span class="s2">160</span><span class="s1">, </span><span class="s2">165</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(sssNumberText)</span><span class="s1">;</span>
+
+        <span class="s0">philhealthNumberLabel = </span><span class="s1">new </span><span class="s0">JLabel(</span><span class="s3">&quot;philhealthNumber:&quot;</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">philhealthNumberLabel.setBounds(</span><span class="s2">100</span><span class="s1">, </span><span class="s2">200</span><span class="s1">, </span><span class="s2">80</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(philhealthNumberLabel)</span><span class="s1">;</span>
+
+        <span class="s0">philhealthNumberText = </span><span class="s1">new </span><span class="s0">JTextField(</span><span class="s2">20</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">philhealthNumberText.setBounds(</span><span class="s2">180</span><span class="s1">, </span><span class="s2">200</span><span class="s1">, </span><span class="s2">165</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(philhealthNumberText)</span><span class="s1">;</span>
+
+        <span class="s0">pagibigNumberLabel = </span><span class="s1">new </span><span class="s0">JLabel(</span><span class="s3">&quot;pagibigNumber:&quot;</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">pagibigNumberLabel.setBounds(</span><span class="s2">100</span><span class="s1">, </span><span class="s2">240</span><span class="s1">, </span><span class="s2">80</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(pagibigNumberLabel)</span><span class="s1">;</span>
+
+        <span class="s0">pagibigNumberText = </span><span class="s1">new </span><span class="s0">JTextField(</span><span class="s2">20</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">pagibigNumberText.setBounds(</span><span class="s2">180</span><span class="s1">, </span><span class="s2">240</span><span class="s1">, </span><span class="s2">165</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(pagibigNumberText)</span><span class="s1">;</span>
+
+        <span class="s0">tinNumberLabel = </span><span class="s1">new </span><span class="s0">JLabel(</span><span class="s3">&quot;tinNumber:&quot;</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">tinNumberLabel.setBounds(</span><span class="s2">100</span><span class="s1">, </span><span class="s2">280</span><span class="s1">, </span><span class="s2">80</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(tinNumberLabel)</span><span class="s1">;</span>
+
+        <span class="s0">tinNumberText = </span><span class="s1">new </span><span class="s0">JTextField(</span><span class="s2">20</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">tinNumberText.setBounds(</span><span class="s2">180</span><span class="s1">, </span><span class="s2">280</span><span class="s1">, </span><span class="s2">165</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(tinNumberText)</span><span class="s1">;</span>
+
+        <span class="s0">payrollLabel = </span><span class="s1">new </span><span class="s0">JLabel(</span><span class="s3">&quot;PAYROLL:&quot;</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">payrollLabel.setBounds(</span><span class="s2">20</span><span class="s1">, </span><span class="s2">350</span><span class="s1">, </span><span class="s2">80</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(payrollLabel)</span><span class="s1">;</span>
+
+        <span class="s0">timeInLabel = </span><span class="s1">new </span><span class="s0">JLabel(</span><span class="s3">&quot;Time In:&quot;</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">timeInLabel.setBounds(</span><span class="s2">40</span><span class="s1">, </span><span class="s2">380</span><span class="s1">, </span><span class="s2">80</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(timeInLabel)</span><span class="s1">;</span>
+
+        <span class="s0">timeInText = </span><span class="s1">new </span><span class="s0">JTextField(</span><span class="s2">20</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">timeInText.setBounds(</span><span class="s2">130</span><span class="s1">, </span><span class="s2">380</span><span class="s1">, </span><span class="s2">165</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(timeInText)</span><span class="s1">;</span>
+
+        <span class="s0">timeOutLabel = </span><span class="s1">new </span><span class="s0">JLabel(</span><span class="s3">&quot;Time Out:&quot;</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">timeOutLabel.setBounds(</span><span class="s2">40</span><span class="s1">, </span><span class="s2">410</span><span class="s1">, </span><span class="s2">80</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(timeOutLabel)</span><span class="s1">;</span>
+
+        <span class="s0">timeOutText = </span><span class="s1">new </span><span class="s0">JTextField(</span><span class="s2">20</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">timeOutText.setBounds(</span><span class="s2">130</span><span class="s1">, </span><span class="s2">410</span><span class="s1">, </span><span class="s2">165</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(timeOutText)</span><span class="s1">;</span>
+
+        <span class="s0">workingHoursLabel = </span><span class="s1">new </span><span class="s0">JLabel(</span><span class="s3">&quot;Working Hours:&quot;</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">workingHoursLabel.setBounds(</span><span class="s2">40</span><span class="s1">, </span><span class="s2">440</span><span class="s1">, </span><span class="s2">80</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(workingHoursLabel)</span><span class="s1">;</span>
+
+        <span class="s0">workingHoursText = </span><span class="s1">new </span><span class="s0">JTextField(</span><span class="s2">20</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">workingHoursText.setBounds(</span><span class="s2">130</span><span class="s1">, </span><span class="s2">440</span><span class="s1">, </span><span class="s2">165</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(workingHoursText)</span><span class="s1">;</span>
+
+        <span class="s0">weeklySalaryLabel = </span><span class="s1">new </span><span class="s0">JLabel(</span><span class="s3">&quot;Weekly Salary:&quot;</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">weeklySalaryLabel.setBounds(</span><span class="s2">40</span><span class="s1">, </span><span class="s2">470</span><span class="s1">, </span><span class="s2">80</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(weeklySalaryLabel)</span><span class="s1">;</span>
+
+        <span class="s0">weeklySalaryText = </span><span class="s1">new </span><span class="s0">JTextField(</span><span class="s2">20</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">weeklySalaryText.setBounds(</span><span class="s2">130</span><span class="s1">, </span><span class="s2">470</span><span class="s1">, </span><span class="s2">165</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(weeklySalaryText)</span><span class="s1">;</span>
+
+        <span class="s0">basicSalaryLabel = </span><span class="s1">new </span><span class="s0">JLabel(</span><span class="s3">&quot;Basic Salary:&quot;</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">basicSalaryLabel.setBounds(</span><span class="s2">40</span><span class="s1">, </span><span class="s2">500</span><span class="s1">, </span><span class="s2">80</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(basicSalaryLabel)</span><span class="s1">;</span>
+
+        <span class="s0">basicSalaryText = </span><span class="s1">new </span><span class="s0">JTextField(</span><span class="s2">20</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">basicSalaryText.setBounds(</span><span class="s2">130</span><span class="s1">, </span><span class="s2">500</span><span class="s1">, </span><span class="s2">165</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(basicSalaryText)</span><span class="s1">;</span>
+
+        <span class="s0">sssLabel = </span><span class="s1">new </span><span class="s0">JLabel(</span><span class="s3">&quot;SSS:&quot;</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">sssLabel.setBounds(</span><span class="s2">40</span><span class="s1">, </span><span class="s2">530</span><span class="s1">, </span><span class="s2">80</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(sssLabel)</span><span class="s1">;</span>
+
+        <span class="s0">sssText = </span><span class="s1">new </span><span class="s0">JTextField(</span><span class="s2">20</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">sssText.setBounds(</span><span class="s2">130</span><span class="s1">, </span><span class="s2">530</span><span class="s1">, </span><span class="s2">165</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(sssText)</span><span class="s1">;</span>
+
+        <span class="s0">philhealthLabel = </span><span class="s1">new </span><span class="s0">JLabel(</span><span class="s3">&quot;Philhealth:&quot;</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">philhealthLabel.setBounds(</span><span class="s2">40</span><span class="s1">, </span><span class="s2">560</span><span class="s1">, </span><span class="s2">80</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(philhealthLabel)</span><span class="s1">;</span>
+
+        <span class="s0">philhealthText = </span><span class="s1">new </span><span class="s0">JTextField(</span><span class="s2">20</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">philhealthText.setBounds(</span><span class="s2">130</span><span class="s1">, </span><span class="s2">560</span><span class="s1">, </span><span class="s2">165</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(philhealthText)</span><span class="s1">;</span>
+
+        <span class="s0">pagibigLabel = </span><span class="s1">new </span><span class="s0">JLabel(</span><span class="s3">&quot;Pag ibig:&quot;</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">pagibigLabel.setBounds(</span><span class="s2">350</span><span class="s1">, </span><span class="s2">380</span><span class="s1">, </span><span class="s2">80</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(pagibigLabel)</span><span class="s1">;</span>
+
+        <span class="s0">pagibigText = </span><span class="s1">new </span><span class="s0">JTextField(</span><span class="s2">20</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">pagibigText.setBounds(</span><span class="s2">450</span><span class="s1">, </span><span class="s2">380</span><span class="s1">, </span><span class="s2">165</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(pagibigText)</span><span class="s1">;</span>
+
+        <span class="s0">tinLabel = </span><span class="s1">new </span><span class="s0">JLabel(</span><span class="s3">&quot;TIN:&quot;</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">tinLabel.setBounds(</span><span class="s2">350</span><span class="s1">, </span><span class="s2">410</span><span class="s1">, </span><span class="s2">80</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(tinLabel)</span><span class="s1">;</span>
+
+        <span class="s0">tinText = </span><span class="s1">new </span><span class="s0">JTextField(</span><span class="s2">20</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">tinText.setBounds(</span><span class="s2">450</span><span class="s1">, </span><span class="s2">410</span><span class="s1">, </span><span class="s2">165</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(tinText)</span><span class="s1">;</span>
+
+        <span class="s0">taxIncomeLabel = </span><span class="s1">new </span><span class="s0">JLabel(</span><span class="s3">&quot;Tax Income:&quot;</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">taxIncomeLabel.setBounds(</span><span class="s2">350</span><span class="s1">, </span><span class="s2">440</span><span class="s1">, </span><span class="s2">80</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(taxIncomeLabel)</span><span class="s1">;</span>
+
+        <span class="s0">taxIncomeText = </span><span class="s1">new </span><span class="s0">JTextField(</span><span class="s2">20</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">taxIncomeText.setBounds(</span><span class="s2">450</span><span class="s1">, </span><span class="s2">440</span><span class="s1">, </span><span class="s2">165</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(taxIncomeText)</span><span class="s1">;</span>
+
+        <span class="s0">witHoldingTaxLabel = </span><span class="s1">new </span><span class="s0">JLabel(</span><span class="s3">&quot;Witholding Tax:&quot;</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">witHoldingTaxLabel.setBounds(</span><span class="s2">350</span><span class="s1">, </span><span class="s2">470</span><span class="s1">, </span><span class="s2">80</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(witHoldingTaxLabel)</span><span class="s1">;</span>
+
+        <span class="s0">witHoldingTaxText = </span><span class="s1">new </span><span class="s0">JTextField(</span><span class="s2">20</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">witHoldingTaxText.setBounds(</span><span class="s2">450</span><span class="s1">, </span><span class="s2">470</span><span class="s1">, </span><span class="s2">165</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(witHoldingTaxText)</span><span class="s1">;</span>
+
+        <span class="s0">netSalaryLabel = </span><span class="s1">new </span><span class="s0">JLabel(</span><span class="s3">&quot;Net Salary:&quot;</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">netSalaryLabel.setBounds(</span><span class="s2">350</span><span class="s1">, </span><span class="s2">500</span><span class="s1">, </span><span class="s2">80</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(netSalaryLabel)</span><span class="s1">;</span>
+
+        <span class="s0">netSalaryText = </span><span class="s1">new </span><span class="s0">JTextField(</span><span class="s2">20</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">netSalaryText.setBounds(</span><span class="s2">450</span><span class="s1">, </span><span class="s2">500</span><span class="s1">, </span><span class="s2">165</span><span class="s1">, </span><span class="s2">25</span><span class="s0">)</span><span class="s1">;</span>
+        <span class="s0">panel.add(netSalaryText)</span><span class="s1">;</span>
+    <span class="s0">}</span>
+
+<span class="s0">}</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<html>
+<head>
+<title>SalaryCalculator.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #6897bb;}
+.s4 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+SalaryCalculator.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java.awt.event.ActionEvent</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">java.awt.event.ActionListener</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">javax.swing.JButton</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">javax.swing.JFrame</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">javax.swing.JLabel</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">javax.swing.JPanel</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">javax.swing.JTextField</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">SalaryCalculator {</span>
+    <span class="s0">public static void </span><span class="s1">main(String[] args) {</span>
+
+        <span class="s1">JFrame frame = </span><span class="s0">new </span><span class="s1">JFrame(</span><span class="s2">&quot;Salary Calculator&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">frame.setSize(</span><span class="s3">700</span><span class="s0">,</span><span class="s3">700</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)</span><span class="s0">;</span>
+        <span class="s1">frame.setLocationRelativeTo(</span><span class="s0">null</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">JPanel panel = </span><span class="s0">new </span><span class="s1">JPanel()</span><span class="s0">;</span>
+        <span class="s1">panel.setLayout(</span><span class="s0">null</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">JLabel userLabel = </span><span class="s0">new </span><span class="s1">JLabel(</span><span class="s2">&quot;Employee Name&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">userLabel.setBounds(</span><span class="s3">50</span><span class="s0">, </span><span class="s3">40</span><span class="s0">, </span><span class="s3">120</span><span class="s0">, </span><span class="s3">25</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">panel.add(userLabel)</span><span class="s0">;</span>
+
+        <span class="s1">JTextField employeeName = </span><span class="s0">new </span><span class="s1">JTextField(</span><span class="s3">20</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">employeeName.setBounds(</span><span class="s3">170</span><span class="s0">, </span><span class="s3">40</span><span class="s0">, </span><span class="s3">195</span><span class="s0">, </span><span class="s3">25</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">panel.add(employeeName)</span><span class="s0">;</span>
+
+        <span class="s1">JLabel lblESalary = </span><span class="s0">new </span><span class="s1">JLabel(</span><span class="s2">&quot;Enter your Salary&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">lblESalary.setBounds(</span><span class="s3">50</span><span class="s0">, </span><span class="s3">80</span><span class="s0">, </span><span class="s3">120</span><span class="s0">, </span><span class="s3">25</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">panel.add(lblESalary)</span><span class="s0">;</span>
+
+        <span class="s1">JTextField txtESalary = </span><span class="s0">new </span><span class="s1">JTextField()</span><span class="s0">;</span>
+        <span class="s1">txtESalary.setBounds(</span><span class="s3">170</span><span class="s0">, </span><span class="s3">80</span><span class="s0">, </span><span class="s3">195</span><span class="s0">, </span><span class="s3">25</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">panel.add(txtESalary)</span><span class="s0">;</span>
+
+        <span class="s1">JLabel lblTax = </span><span class="s0">new </span><span class="s1">JLabel(</span><span class="s2">&quot;Tax&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">lblTax.setBounds(</span><span class="s3">50</span><span class="s0">, </span><span class="s3">120</span><span class="s0">, </span><span class="s3">120</span><span class="s0">, </span><span class="s3">25</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">panel.add(lblTax)</span><span class="s0">;</span>
+
+        <span class="s1">JTextField txtTax = </span><span class="s0">new </span><span class="s1">JTextField()</span><span class="s0">;</span>
+        <span class="s1">txtTax.setBounds(</span><span class="s3">170</span><span class="s0">, </span><span class="s3">120</span><span class="s0">, </span><span class="s3">195</span><span class="s0">, </span><span class="s3">25</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">panel.add(txtTax)</span><span class="s0">;</span>
+
+        <span class="s1">JLabel lblNet = </span><span class="s0">new </span><span class="s1">JLabel(</span><span class="s2">&quot;Net&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">lblNet.setBounds(</span><span class="s3">50</span><span class="s0">, </span><span class="s3">160</span><span class="s0">, </span><span class="s3">120</span><span class="s0">, </span><span class="s3">25</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">panel.add(lblNet)</span><span class="s0">;</span>
+
+        <span class="s1">JTextField txtNet = </span><span class="s0">new </span><span class="s1">JTextField()</span><span class="s0">;</span>
+        <span class="s1">txtNet.setBounds(</span><span class="s3">170</span><span class="s0">, </span><span class="s3">160</span><span class="s0">, </span><span class="s3">195</span><span class="s0">, </span><span class="s3">25</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">panel.add(txtNet)</span><span class="s0">;</span>
+
+        <span class="s1">JButton btnCalculate = </span><span class="s0">new </span><span class="s1">JButton(</span><span class="s2">&quot;Calculate&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">btnCalculate.setBounds(</span><span class="s3">390</span><span class="s0">, </span><span class="s3">80</span><span class="s0">, </span><span class="s3">120</span><span class="s0">, </span><span class="s3">25</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">panel.add(btnCalculate)</span><span class="s0">;</span>
+
+        <span class="s1">JLabel lblPhilHealth = </span><span class="s0">new </span><span class="s1">JLabel(</span><span class="s2">&quot;PhilHealth Contribution:&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">lblPhilHealth.setBounds(</span><span class="s3">50</span><span class="s0">, </span><span class="s3">200</span><span class="s0">, </span><span class="s3">150</span><span class="s0">, </span><span class="s3">25</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">panel.add(lblPhilHealth)</span><span class="s0">;</span>
+
+        <span class="s1">JTextField txtPhilHealth = </span><span class="s0">new </span><span class="s1">JTextField()</span><span class="s0">;</span>
+        <span class="s1">txtPhilHealth.setBounds(</span><span class="s3">210</span><span class="s0">, </span><span class="s3">200</span><span class="s0">, </span><span class="s3">155</span><span class="s0">, </span><span class="s3">25</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">txtPhilHealth.setEditable(</span><span class="s0">false</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">panel.add(txtPhilHealth)</span><span class="s0">;</span>
+
+        <span class="s1">JLabel lblSSS = </span><span class="s0">new </span><span class="s1">JLabel(</span><span class="s2">&quot;SSS Contribution:&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">lblSSS.setBounds(</span><span class="s3">50</span><span class="s0">, </span><span class="s3">240</span><span class="s0">, </span><span class="s3">150</span><span class="s0">, </span><span class="s3">25</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">panel.add(lblSSS)</span><span class="s0">;</span>
+
+        <span class="s1">JTextField txtSSS = </span><span class="s0">new </span><span class="s1">JTextField()</span><span class="s0">;</span>
+        <span class="s1">txtSSS.setBounds(</span><span class="s3">210</span><span class="s0">, </span><span class="s3">240</span><span class="s0">, </span><span class="s3">155</span><span class="s0">, </span><span class="s3">25</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">txtSSS.setEditable(</span><span class="s0">false</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">panel.add(txtSSS)</span><span class="s0">;</span>
+
+        <span class="s1">JLabel lblPagIbig = </span><span class="s0">new </span><span class="s1">JLabel(</span><span class="s2">&quot;Pag-Ibig Contribution:&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">lblPagIbig.setBounds(</span><span class="s3">50</span><span class="s0">, </span><span class="s3">280</span><span class="s0">, </span><span class="s3">150</span><span class="s0">, </span><span class="s3">25</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">panel.add(lblPagIbig)</span><span class="s0">;</span>
+
+        <span class="s1">JTextField txtPagIbig = </span><span class="s0">new </span><span class="s1">JTextField()</span><span class="s0">;</span>
+        <span class="s1">txtPagIbig.setBounds(</span><span class="s3">210</span><span class="s0">, </span><span class="s3">280</span><span class="s0">, </span><span class="s3">155</span><span class="s0">, </span><span class="s3">25</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">txtPagIbig.setEditable(</span><span class="s0">false</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">panel.add(txtPagIbig)</span><span class="s0">;</span>
+
+        <span class="s1">btnCalculate.addActionListener(</span><span class="s0">new </span><span class="s1">ActionListener() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">actionPerformed(ActionEvent e) {</span>
+
+                <span class="s0">double </span><span class="s1">basicSalary = Double.parseDouble(txtESalary.getText())</span><span class="s0">;</span>
+                <span class="s0">double </span><span class="s1">philhealth = philhealth(basicSalary)</span><span class="s0">;</span>
+                <span class="s0">double </span><span class="s1">sss = sss(basicSalary)</span><span class="s0">;</span>
+                <span class="s0">double </span><span class="s1">pagibig = pagibig(basicSalary)</span><span class="s0">;</span>
+                <span class="s0">double </span><span class="s1">deductions = sss + philhealth + pagibig</span><span class="s0">;</span>
+                <span class="s0">double </span><span class="s1">taxableIncome = basicSalary - deductions</span><span class="s0">;</span>
+                <span class="s0">double </span><span class="s1">tax = tax(taxableIncome)</span><span class="s0">;</span>
+                <span class="s0">double </span><span class="s1">net = basicSalary - tax - deductions</span><span class="s0">;</span>
+                <span class="s1">txtPhilHealth.setText(String.format(</span><span class="s2">&quot;%.2f&quot;</span><span class="s0">, </span><span class="s1">philhealth))</span><span class="s0">;</span>
+                <span class="s1">txtNet.setText(String.format(</span><span class="s2">&quot;%.2f&quot;</span><span class="s0">, </span><span class="s1">net))</span><span class="s0">;</span>
+
+                <span class="s4">// SSS calculation</span>
+                <span class="s0">if </span><span class="s1">(basicSalary &gt; </span><span class="s3">24750</span><span class="s1">) {</span>
+                    <span class="s1">sss = </span><span class="s3">1125</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt;= </span><span class="s3">24250 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">24750</span><span class="s1">) {</span>
+                    <span class="s1">sss = </span><span class="s3">1102.50</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt;= </span><span class="s3">23750 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">24250</span><span class="s1">) {</span>
+                    <span class="s1">sss = </span><span class="s3">1080.00</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt;= </span><span class="s3">23250 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">23750</span><span class="s1">) {</span>
+                    <span class="s1">sss = </span><span class="s3">1057.50</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt;= </span><span class="s3">22750 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">23250</span><span class="s1">) {</span>
+                    <span class="s1">sss = </span><span class="s3">1035.00</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt;= </span><span class="s3">22250 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">22750</span><span class="s1">) {</span>
+                    <span class="s1">sss = </span><span class="s3">1012.50</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt;= </span><span class="s3">21750 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">22250</span><span class="s1">) {</span>
+                    <span class="s1">sss = </span><span class="s3">990.00</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt;= </span><span class="s3">21250 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">21750</span><span class="s1">) {</span>
+                    <span class="s1">sss = </span><span class="s3">967.50</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt;= </span><span class="s3">20750 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">21250</span><span class="s1">) {</span>
+                    <span class="s1">sss = </span><span class="s3">945.00</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt;= </span><span class="s3">20250 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">20750</span><span class="s1">) {</span>
+                    <span class="s1">sss = </span><span class="s3">922.50</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt;= </span><span class="s3">19750 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">20250</span><span class="s1">) {</span>
+                    <span class="s1">sss = </span><span class="s3">900.00</span><span class="s0">;</span>
+                <span class="s1">}</span>
+                <span class="s1">txtSSS.setText(String.format(</span><span class="s2">&quot;%.2f&quot;</span><span class="s0">, </span><span class="s1">sss))</span><span class="s0">;</span>
+
+                <span class="s4">// PhilHealth Calculation</span>
+                <span class="s1">txtPhilHealth.setText(String.format(</span><span class="s2">&quot;%.2f&quot;</span><span class="s0">, </span><span class="s1">philhealth))</span><span class="s0">;</span>
+
+                <span class="s4">// Pag-Ibig calculation</span>
+                <span class="s0">double </span><span class="s1">pagIbig = </span><span class="s3">0</span><span class="s0">;</span>
+                <span class="s0">if </span><span class="s1">(basicSalary == </span><span class="s3">1000 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">1500</span><span class="s1">) {</span>
+                    <span class="s1">pagIbig = basicSalary * </span><span class="s3">0.01</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt; </span><span class="s3">1500</span><span class="s1">) {</span>
+                    <span class="s1">pagIbig = basicSalary * </span><span class="s3">0.02</span><span class="s0">;</span>
+                <span class="s1">}</span>
+
+                <span class="s0">if </span><span class="s1">(pagIbig &gt; </span><span class="s3">100</span><span class="s1">) {</span>
+                    <span class="s1">pagIbig = </span><span class="s3">100</span><span class="s0">;</span>
+                <span class="s1">}</span>
+
+
+
+                <span class="s0">if</span><span class="s1">(basicSalary &gt; </span><span class="s3">3250 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">3750</span><span class="s1">)</span>
+                <span class="s1">{</span>
+                    <span class="s1">tax = basicSalary * </span><span class="s3">0.05</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt; </span><span class="s3">3750 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">4250</span><span class="s1">)</span>
+                <span class="s1">{</span>
+                    <span class="s1">tax = basicSalary * </span><span class="s3">0.06</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt; </span><span class="s3">4250 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">4750</span><span class="s1">)</span>
+                <span class="s1">{</span>
+                    <span class="s1">tax = basicSalary * </span><span class="s3">0.07</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt; </span><span class="s3">4750 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">5250</span><span class="s1">)</span>
+                <span class="s1">{</span>
+                    <span class="s1">tax = basicSalary * </span><span class="s3">0.08</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt; </span><span class="s3">5250 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">5750</span><span class="s1">)</span>
+                <span class="s1">{</span>
+                    <span class="s1">tax = basicSalary * </span><span class="s3">0.09</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt; </span><span class="s3">5750 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">6250</span><span class="s1">)</span>
+                <span class="s1">{</span>
+                    <span class="s1">tax = basicSalary * </span><span class="s3">0.10</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt; </span><span class="s3">6250 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">6750</span><span class="s1">)</span>
+                <span class="s1">{</span>
+                    <span class="s1">tax = basicSalary * </span><span class="s3">0.11</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt; </span><span class="s3">6750</span><span class="s1">)</span>
+                <span class="s1">{</span>
+                    <span class="s1">tax = basicSalary * </span><span class="s3">0.12</span><span class="s0">;</span>
+                <span class="s1">}</span>
+
+                <span class="s1">txtTax.setText(String.format(</span><span class="s2">&quot;%.2f&quot;</span><span class="s0">, </span><span class="s1">tax))</span><span class="s0">;</span>
+                <span class="s1">net = basicSalary - tax</span><span class="s0">;</span>
+                <span class="s1">txtNet.setText(String.format(</span><span class="s2">&quot;%.2f&quot;</span><span class="s0">, </span><span class="s1">net))</span><span class="s0">;</span>
+            <span class="s1">}</span>
+        <span class="s1">})</span><span class="s0">;</span>
+
+        <span class="s1">frame.add(panel)</span><span class="s0">;</span>
+        <span class="s1">frame.setVisible(</span><span class="s0">true</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">private static double </span><span class="s1">sss(</span><span class="s0">double </span><span class="s1">basicSalary) {</span>
+        <span class="s0">if </span><span class="s1">(basicSalary &gt; </span><span class="s3">24750</span><span class="s1">) {</span>
+            <span class="s0">return </span><span class="s3">1125</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt;= </span><span class="s3">24250 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">24750</span><span class="s1">) {</span>
+            <span class="s0">return </span><span class="s3">1102.50</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt;= </span><span class="s3">23750 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">24250</span><span class="s1">) {</span>
+            <span class="s0">return </span><span class="s3">1080.00</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt;= </span><span class="s3">23250 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">23750</span><span class="s1">) {</span>
+            <span class="s0">return </span><span class="s3">1057.50</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt;= </span><span class="s3">22750 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">23250</span><span class="s1">) {</span>
+            <span class="s0">return </span><span class="s3">1035.00</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt;= </span><span class="s3">22250 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">22750</span><span class="s1">) {</span>
+            <span class="s0">return </span><span class="s3">1012.50</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt;= </span><span class="s3">21750 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">22250</span><span class="s1">) {</span>
+            <span class="s0">return </span><span class="s3">990.00</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt;= </span><span class="s3">21250 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">21750</span><span class="s1">) {</span>
+            <span class="s0">return </span><span class="s3">967.50</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt;= </span><span class="s3">20750 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">21250</span><span class="s1">) {</span>
+            <span class="s0">return </span><span class="s3">945.00</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt;= </span><span class="s3">20250 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">20750</span><span class="s1">) {</span>
+            <span class="s0">return </span><span class="s3">922.50</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">else if </span><span class="s1">(basicSalary &gt;= </span><span class="s3">19750 </span><span class="s1">&amp;&amp; basicSalary &lt;= </span><span class="s3">20250</span><span class="s1">) {</span>
+            <span class="s0">return </span><span class="s3">900.00</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+            <span class="s0">return </span><span class="s3">0.0</span><span class="s0">;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+
+    <span class="s0">private static double </span><span class="s1">pagibig(</span><span class="s0">double </span><span class="s1">salary) {</span>
+        <span class="s0">if </span><span class="s1">(salary &gt;= </span><span class="s3">1000 </span><span class="s1">&amp;&amp; salary &lt;= </span><span class="s3">1500</span><span class="s1">) {</span>
+            <span class="s0">return </span><span class="s1">salary * </span><span class="s3">0.01</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">else if </span><span class="s1">(salary &gt; </span><span class="s3">1500</span><span class="s1">) {</span>
+            <span class="s0">double </span><span class="s1">pagibig = salary * </span><span class="s3">0.02</span><span class="s0">;</span>
+            <span class="s0">if </span><span class="s1">(pagibig &gt; </span><span class="s3">100</span><span class="s1">) {</span>
+                <span class="s1">pagibig = </span><span class="s3">100</span><span class="s0">;</span>
+            <span class="s1">}</span>
+            <span class="s0">return </span><span class="s1">pagibig</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+            <span class="s0">return </span><span class="s3">0.0</span><span class="s0">;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+    <span class="s0">private static double </span><span class="s1">tax(</span><span class="s0">double </span><span class="s1">taxableIncome) {</span>
+        <span class="s0">if</span><span class="s1">(taxableIncome &gt; </span><span class="s3">0 </span><span class="s1">&amp;&amp; taxableIncome &lt;= </span><span class="s3">250000</span><span class="s1">) {</span>
+            <span class="s0">return </span><span class="s3">0.0</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">else if</span><span class="s1">(taxableIncome &gt; </span><span class="s3">250000 </span><span class="s1">&amp;&amp; taxableIncome &lt;= </span><span class="s3">400000</span><span class="s1">) {</span>
+            <span class="s0">return </span><span class="s1">(taxableIncome - </span><span class="s3">250000</span><span class="s1">) * </span><span class="s3">0.2</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">else if</span><span class="s1">(taxableIncome &gt; </span><span class="s3">400000 </span><span class="s1">&amp;&amp; taxableIncome &lt;= </span><span class="s3">800000</span><span class="s1">) {</span>
+            <span class="s0">return </span><span class="s3">30000 </span><span class="s1">+ (taxableIncome - </span><span class="s3">400000</span><span class="s1">) * </span><span class="s3">0.25</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">else if</span><span class="s1">(taxableIncome &gt; </span><span class="s3">800000 </span><span class="s1">&amp;&amp; taxableIncome &lt;= </span><span class="s3">2000000</span><span class="s1">) {</span>
+            <span class="s0">return </span><span class="s3">130000 </span><span class="s1">+ (taxableIncome - </span><span class="s3">800000</span><span class="s1">) * </span><span class="s3">0.3</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">else if</span><span class="s1">(taxableIncome &gt; </span><span class="s3">2000000 </span><span class="s1">&amp;&amp; taxableIncome &lt;= </span><span class="s3">8000000</span><span class="s1">) {</span>
+            <span class="s0">return </span><span class="s3">490000 </span><span class="s1">+ (taxableIncome - </span><span class="s3">2000000</span><span class="s1">) * </span><span class="s3">0.32</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">else if</span><span class="s1">(taxableIncome &gt; </span><span class="s3">8000000</span><span class="s1">) {</span>
+            <span class="s0">return </span><span class="s3">2410000 </span><span class="s1">+ (taxableIncome - </span><span class="s3">8000000</span><span class="s1">) * </span><span class="s3">0.35</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+            <span class="s0">return </span><span class="s3">0.0</span><span class="s0">;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+    <span class="s0">private static double </span><span class="s1">philhealth(</span><span class="s0">double </span><span class="s1">salary) {</span>
+        <span class="s0">return </span><span class="s1">(salary * </span><span class="s3">0.03</span><span class="s1">) / </span><span class="s3">2</span><span class="s0">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
